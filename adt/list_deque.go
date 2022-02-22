@@ -6,7 +6,7 @@ type ListDeque struct {
 }
 
 func (q *ListDeque) Empty() bool {
-	return q.head == nil
+	return q.head == nil || q.tail == nil
 }
 
 func (q *ListDeque) Pull(value interface{}) {
