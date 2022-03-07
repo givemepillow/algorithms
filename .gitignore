@@ -15,4 +15,4 @@
 # vendor/
 
 # main for dev
-/main.go
+main/
