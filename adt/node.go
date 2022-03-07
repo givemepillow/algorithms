@@ -1,6 +1,6 @@
 package adt
 
-type Node struct {
-	value      interface{}
-	prev, next *Node
+type Node[T any] struct {
+	value      T
+	prev, next *Node[T]
 }

@@ -7,14 +7,14 @@ import (
 
 func main() {
 
-	indexStack := adt.NewIndexStack(adt.NewArrayDeque(100))
-	indexStack.PushIf(3)
-	indexStack.PushIf(3)
-	indexStack.PushIf("K")
-	indexStack.PushIf("K")
-	indexStack.PushIf("kirill")
-
-	extract(indexStack)
+	//indexStack := adt.NewIndexStack(adt.NewArrayDeque(100))
+	//indexStack.PushIf(3)
+	//indexStack.PushIf(3)
+	//indexStack.PushIf("K")
+	//indexStack.PushIf("K")
+	//indexStack.PushIf("kirill")
+	//
+	//extract(indexStack)
 
 	// deque := adt.NewArrayDeque(1000)
 	//deque := adt.ListDeque{}
@@ -50,7 +50,7 @@ func main() {
 	//uf.Unite(4, 7)
 	//fmt.Println("Is united:", uf.Find(1, 7))
 	//
-	//stack := new(adt.ListStack)
+	//stack := new(adt.ArrayStack[interface{}])
 	//stack.Push(1)
 	//stack.Push(2)
 	//stack.Pop()

@@ -1,24 +1,24 @@
 package adt
 
-type ArrayStack struct {
+type ArrayStack[T any] struct {
 	number int
-	array  [1000]interface{}
+	array  [1000]T
 }
 
-func (s *ArrayStack) Empty() bool {
+func (s *ArrayStack[T]) Empty() bool {
 	return s.number == 0
 }
 
-func (s *ArrayStack) Pop() interface{} {
+func (s *ArrayStack[T]) Pop() T {
 	s.number -= 1
 	return s.array[s.number]
 }
 
-func (s *ArrayStack) Push(value interface{}) {
+func (s *ArrayStack[T]) Push(value T) {
 	s.array[s.number] = value
 	s.number += 1
 }
 
-func (s *ArrayStack) Size() int {
+func (s *ArrayStack[T]) Size() int {
 	return s.number
 }
