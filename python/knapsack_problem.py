@@ -8,7 +8,7 @@ prices = [30, 60, 70, 80]
 
 matrix = [[0 for _ in range(G + 1)] for _ in range(N + 1)]
 
-# Для отслеживание выбранных предметов.
+# Для отслеживания выбранных предметов.
 items = [[[] for _ in range(G + 1)] for _ in range(N + 1)]
 coords = (0, 0)
 max_price = 0
@@ -18,9 +18,9 @@ for i in range(1, 1 + N):
         if weights[i - 1] <= g:
             current = prices[i - 1] + matrix[i - 1][g - weights[i - 1]]
             if current > prev:
-                matrix[i][g] = current
                 # Отслеживание выбранных предметов.
                 items[i][g] += [i] + items[i - 1][g - weights[i - 1]]
+            matrix[i][g] = max(current, prev)
         else:
             matrix[i][g] = prev
             # Отслеживание выбранных предметов.
